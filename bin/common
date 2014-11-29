@@ -49,7 +49,7 @@ _has_buildPropertiesFile() {
 
 _has_playConfig() {
   local ctxDir=$1
-  test -e $ctxDir/conf/application.conf
+  test -e $ctxDir/conf/application.conf || test -e $ctxDir/scalajvm/conf/application.conf
 }
 
 _has_playPluginsFile() {
